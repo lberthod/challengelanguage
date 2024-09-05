@@ -1,0 +1,405 @@
+ {
+      "adjectives": {
+        "0": {
+          "text": {
+            "french": "grand",
+            "english": "big",
+            "italian": "grande"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["immense", "vaste"],
+            "english": ["huge", "large"],
+            "italian": ["immenso", "vasto"]
+          },
+          "antonymes": {
+            "french": ["petit", "minuscule"],
+            "english": ["small", "tiny"],
+            "italian": ["piccolo", "minuscolo"]
+          }
+        },
+        "1": {
+          "text": {
+            "french": "rapide",
+            "english": "fast",
+            "italian": "veloce"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["vite", "prompt"],
+            "english": ["quick", "speedy"],
+            "italian": ["presto", "celere"]
+          },
+          "antonymes": {
+            "french": ["lent", "paresseux"],
+            "english": ["slow", "sluggish"],
+            "italian": ["lento", "pigro"]
+          }
+        },
+        "2": {
+          "text": {
+            "french": "beau",
+            "english": "beautiful",
+            "italian": "bello"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["joli", "magnifique"],
+            "english": ["pretty", "gorgeous"],
+            "italian": ["carino", "splendido"]
+          },
+          "antonymes": {
+            "french": ["laid", "moche"],
+            "english": ["ugly", "hideous"],
+            "italian": ["brutto", "orribile"]
+          }
+        },
+        "3": {
+          "text": {
+            "french": "froid",
+            "english": "cold",
+            "italian": "freddo"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["glacial", "frisquet"],
+            "english": ["chilly", "frigid"],
+            "italian": ["gelido", "fresco"]
+          },
+          "antonymes": {
+            "french": ["chaud", "brûlant"],
+            "english": ["hot", "warm"],
+            "italian": ["caldo", "bollente"]
+          }
+        },
+        "4": {
+          "text": {
+            "french": "difficile",
+            "english": "difficult",
+            "italian": "difficile"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["ardu", "compliqué"],
+            "english": ["hard", "complex"],
+            "italian": ["duro", "complicato"]
+          },
+          "antonymes": {
+            "french": ["facile", "simple"],
+            "english": ["easy", "simple"],
+            "italian": ["facile", "semplice"]
+          }
+        },
+        "5": {
+          "text": {
+            "french": "lumineux",
+            "english": "bright",
+            "italian": "luminoso"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["brillant", "éclairé"],
+            "english": ["shiny", "radiant"],
+            "italian": ["brillante", "splendente"]
+          },
+          "antonymes": {
+            "french": ["sombre", "obscur"],
+            "english": ["dark", "dim"],
+            "italian": ["scuro", "tenebroso"]
+          }
+        },
+        "6": {
+          "text": {
+            "french": "nouveau",
+            "english": "new",
+            "italian": "nuovo"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["récent", "moderne"],
+            "english": ["recent", "modern"],
+            "italian": ["recente", "moderno"]
+          },
+          "antonymes": {
+            "french": ["ancien", "vieux"],
+            "english": ["old", "ancient"],
+            "italian": ["antico", "vecchio"]
+          }
+        },
+        "7": {
+          "text": {
+            "french": "heureux",
+            "english": "happy",
+            "italian": "felice"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["joyeux", "content"],
+            "english": ["joyful", "content"],
+            "italian": ["allegro", "contento"]
+          },
+          "antonymes": {
+            "french": ["triste", "malheureux"],
+            "english": ["sad", "unhappy"],
+            "italian": ["triste", "infelice"]
+          }
+        },
+        "8": {
+          "text": {
+            "french": "propre",
+            "english": "clean",
+            "italian": "pulito"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["net", "immaculé"],
+            "english": ["tidy", "spotless"],
+            "italian": ["ordinato", "immacolato"]
+          },
+          "antonymes": {
+            "french": ["sale", "souillé"],
+            "english": ["dirty", "filthy"],
+            "italian": ["sporco", "sudicio"]
+          }
+        },
+        "9": {
+          "text": {
+            "french": "facile",
+            "english": "easy",
+            "italian": "facile"
+          },
+          "category": "adjective",
+          "synonymes": {
+            "french": ["simple", "aisé"],
+            "english": ["simple", "effortless"],
+            "italian": ["semplice", "agevole"]
+          },
+          "antonymes": {
+            "french": ["difficile", "complexe"],
+            "english": ["difficult", "complex"],
+            "italian": ["difficile", "complesso"]
+          }
+        }
+      },
+      "verbs": {
+        "0": {
+          "text": {
+            "french": "courir",
+            "english": "run",
+            "italian": "correre"
+          },
+          "category": "verb",
+          "synonymes": {
+            "french": ["sprint", "galoper"],
+            "english": ["sprint", "dash"],
+            "italian": ["scattare", "galoppare"]
+          },
+          "antonymes": {
+            "french": ["marcher", "ramper"],
+            "english": ["walk", "crawl"],
+            "italian": ["camminare", "strisciare"]
+          }
+        },
+        "1": {
+          "text": {
+            "french": "parler",
+            "english": "speak",
+            "italian": "parlare"
+          },
+          "category": "verb",
+          "synonymes": {
+            "french": ["discuter", "communiquer"],
+            "english": ["talk", "communicate"],
+            "italian": ["conversare", "comunicare"]
+          },
+          "antonymes": {
+            "french": ["se taire", "silencier"],
+            "english": ["be silent", "hush"],
+            "italian": ["tacere", "zittire"]
+          }
+        },
+        "2": {
+          "text": {
+            "french": "manger",
+            "english": "eat",
+            "italian": "mangiare"
+          },
+          "category": "verb",
+          "synonymes": {
+            "french": ["consommer", "déguster"],
+            "english": ["consume", "devour"],
+            "italian": ["consumare", "divorare"]
+          },
+          "antonymes": {
+            "french": ["jeûner", "s'abstenir"],
+            "english": ["fast", "abstain"],
+            "italian": ["digiunare", "astenersi"]
+          }
+        },
+        "3": {
+          "text": {
+            "french": "dormir",
+            "english": "sleep",
+            "italian": "dormire"
+          },
+          "category": "verb",
+          "synonymes": {
+            "french": ["reposer", "somnoler"],
+            "english": ["rest", "slumber"],
+            "italian": ["riposare", "sonnecchiare"]
+          },
+          "antonymes": {
+            "french": ["se réveiller", "éveiller"],
+            "english": ["wake up", "arouse"],
+            "italian": ["svegliarsi", "destarsi"]
+          }
+        },
+        "4": {
+          "text": {
+            "french": "lire",
+            "english": "read",
+            "italian": "leggere"
+          },
+          "category": "verb",
+          "synonymes": {
+            "french": ["parcourir", "étudier"],
+            "english": ["peruse", "study"],
+            "italian": ["consultare", "studiare"]
+          },
+          "antonymes": {
+            "french": ["ignorer", "négliger"],
+            "english": ["ignore", "neglect"],
+            "italian": ["ignorare", "trascurare"]
+          }
+        },
+        "5": {
+          "text": {
+            "french": "écrire",
+            "english": "write",
+            "italian": "scrivere"
+          },
+          "category": "verb",
+          "synonymes": {
+            "french": ["rédiger", "noter"],
+            "english": ["compose", "note"],
+            "italian": ["redigere", "annotare"]
+          },
+          "antonymes": {
+            "french": ["effacer", "gommer"],
+            "english": ["erase", "delete"],
+            "italian": ["cancellare", "eliminare"]
+          }
+        }
+      },
+      "nouns": {
+        "0": {
+          "text": {
+            "french": "maison",
+            "english": "house",
+            "italian": "casa"
+          },
+          "category": "noun",
+          "synonymes": {
+            "french": ["habitation", "domicile"],
+            "english": ["home", "residence"],
+            "italian": ["abitazione", "dimora"]
+          },
+          "antonymes": {
+            "french": ["extérieur", "dehors"],
+            "english": ["outside", "outdoors"],
+            "italian": ["esterno", "all'aperto"]
+          }
+        },
+        "1": {
+          "text": {
+            "french": "voiture",
+            "english": "car",
+            "italian": "macchina"
+          },
+          "category": "noun",
+          "synonymes": {
+            "french": ["automobile", "véhicule"],
+            "english": ["automobile", "vehicle"],
+            "italian": ["automobile", "veicolo"]
+          },
+          "antonymes": {
+            "french": ["vélo", "bicyclette"],
+            "english": ["bicycle", "bike"],
+            "italian": ["bicicletta", "bici"]
+          }
+        },
+        "2": {
+          "text": {
+            "french": "chat",
+            "english": "cat",
+            "italian": "gatto"
+          },
+          "category": "noun",
+          "synonymes": {
+            "french": ["félin", "minou"],
+            "english": ["feline", "kitty"],
+            "italian": ["felino", "micio"]
+          },
+          "antonymes": {
+            "french": ["chien"],
+            "english": ["dog"],
+            "italian": ["cane"]
+          }
+        },
+        "3": {
+          "text": {
+            "french": "livre",
+            "english": "book",
+            "italian": "libro"
+          },
+          "category": "noun",
+          "synonymes": {
+            "french": ["ouvrage", "manuel"],
+            "english": ["volume", "manual"],
+            "italian": ["volume", "manuale"]
+          },
+          "antonymes": {
+            "french": ["revue", "magazine"],
+            "english": ["magazine", "journal"],
+            "italian": ["rivista", "giornale"]
+          }
+        },
+        "4": {
+          "text": {
+            "french": "arbre",
+            "english": "tree",
+            "italian": "albero"
+          },
+          "category": "noun",
+          "synonymes": {
+            "french": ["plante", "arbuste"],
+            "english": ["plant", "shrub"],
+            "italian": ["pianta", "arbusto"]
+          },
+          "antonymes": {
+            "french": ["fleur"],
+            "english": ["flower"],
+            "italian": ["fiore"]
+          }
+        },
+        "5": {
+          "text": {
+            "french": "soleil",
+            "english": "sun",
+            "italian": "sole"
+          },
+          "category": "noun",
+          "synonymes": {
+            "french": ["astre", "étoile"],
+            "english": ["star", "celestial body"],
+            "italian": ["stella", "astro"]
+          },
+          "antonymes": {
+            "french": ["lune", "nuit"],
+            "english": ["moon", "night"],
+            "italian": ["luna", "notte"]
+          }
+        }
+      }
+    }
+    
