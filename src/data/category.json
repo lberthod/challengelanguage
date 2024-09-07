@@ -1,0 +1,39 @@
+{
+      "animals": [
+        {
+          "id": 1,
+          "word": {
+            "french": "chat",
+            "english": "cat",
+            "italian": "gatto"
+          }
+        },
+        {
+          "id": 2,
+          "word": {
+            "french": "chien",
+            "english": "dog",
+            "italian": "cane"
+          }
+        }
+      ],
+      "food": [
+        {
+          "id": 3,
+          "word": {
+            "french": "pomme",
+            "english": "apple",
+            "italian": "mela"
+          }
+        },
+        {
+          "id": 4,
+          "word": {
+            "french": "pain",
+            "english": "bread",
+            "italian": "pane"
+          }
+        }
+      ]
+    }
+  

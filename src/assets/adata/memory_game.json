@@ -1,0 +1,133 @@
+[
+    {
+      "id": 1,
+      "word": {
+        "en": "carrot",
+        "fr": "carotte",
+        "it": "carota",
+        "ru": "морковь",
+        "zh": "胡萝卜",
+        "es": "zanahoria",
+        "pt": "cenoura"
+      },
+      "image": "carrot.png"
+    },
+    {
+      "id": 2,
+      "word": {
+        "en": "potato",
+        "fr": "pomme de terre",
+        "it": "patata",
+        "ru": "картофель",
+        "zh": "土豆",
+        "es": "patata",
+        "pt": "batata"
+      },
+      "image": "potato.png"
+    },
+    {
+      "id": 3,
+      "word": {
+        "en": "apple",
+        "fr": "pomme",
+        "it": "mela",
+        "ru": "яблоко",
+        "zh": "苹果",
+        "es": "manzana",
+        "pt": "maçã"
+      },
+      "image": "apple.png"
+    },
+    {
+      "id": 4,
+      "word": {
+        "en": "tomato",
+        "fr": "tomate",
+        "it": "pomodoro",
+        "ru": "помидор",
+        "zh": "西红柿",
+        "es": "tomate",
+        "pt": "tomate"
+      },
+      "image": "tomato.png"
+    },
+    {
+      "id": 5,
+      "word": {
+        "en": "onion",
+        "fr": "oignon",
+        "it": "cipolla",
+        "ru": "лук",
+        "zh": "洋葱",
+        "es": "cebolla",
+        "pt": "cebola"
+      },
+      "image": "onion.png"
+    },
+    {
+      "id": 6,
+      "word": {
+        "en": "pepper",
+        "fr": "poivron",
+        "it": "peperone",
+        "ru": "перец",
+        "zh": "辣椒",
+        "es": "pimiento",
+        "pt": "pimentão"
+      },
+      "image": "pepper.png"
+    },
+    {
+      "id": 7,
+      "word": {
+        "en": "lettuce",
+        "fr": "laitue",
+        "it": "lattuga",
+        "ru": "салат",
+        "zh": "生菜",
+        "es": "lechuga",
+        "pt": "alface"
+      },
+      "image": "lettuce.png"
+    },
+    {
+      "id": 8,
+      "word": {
+        "en": "grape",
+        "fr": "raisin",
+        "it": "uva",
+        "ru": "виноград",
+        "zh": "葡萄",
+        "es": "uva",
+        "pt": "uva"
+      },
+      "image": "grape.png"
+    },
+    {
+      "id": 9,
+      "word": {
+        "en": "cucumber",
+        "fr": "concombre",
+        "it": "cetriolo",
+        "ru": "огурец",
+        "zh": "黄瓜",
+        "es": "pepino",
+        "pt": "pepino"
+      },
+      "image": "cucumber.png"
+    },
+    {
+      "id": 10,
+      "word": {
+        "en": "broccoli",
+        "fr": "brocoli",
+        "it": "broccolo",
+        "ru": "брокколи",
+        "zh": "西兰花",
+        "es": "brócoli",
+        "pt": "brócolis"
+      },
+      "image": "broccoli.png"
+    }
+  ]
+  

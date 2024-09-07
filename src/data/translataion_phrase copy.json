@@ -1,0 +1,40 @@
+ {
+    "categories": {
+      "daily_life": [
+        {
+          "id": 0,
+          "languages": {
+            "french": "Je vais au marché.",
+            "english": "I am going to the market.",
+            "italian": "Vado al mercato."
+          }
+        },
+        {
+          "id": 1,
+          "languages": {
+            "french": "Il fait beau aujourd'hui.",
+            "english": "The weather is nice today.",
+            "italian": "Oggi c'è bel tempo."
+          }
+        }
+      ],
+      "travel": [
+        {
+          "id": 2,
+          "languages": {
+            "french": "Où est l'aéroport?",
+            "english": "Where is the airport?",
+            "italian": "Dov'è l'aeroporto?"
+          }
+        },
+        {
+          "id": 3,
+          "languages": {
+            "french": "J'ai besoin d'un taxi.",
+            "english": "I need a taxi.",
+            "italian": "Ho bisogno di un taxi."
+          }
+        }
+      ]
+    }
+  }

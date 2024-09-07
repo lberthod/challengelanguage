@@ -1,0 +1,223 @@
+ {
+      "0": {
+        "french": "Je ___ (aller) au marché tous les jours.",
+        "english": "I ___ (go) to the market every day.",
+        "italian": "Io ___ (andare) al mercato tutti i giorni.",
+        "verbs": {
+          "french": {
+            "present": "vais",
+            "past": "suis allé",
+            "future": "irai"
+          },
+          "english": {
+            "present": "go",
+            "past": "went",
+            "future": "will go"
+          },
+          "italian": {
+            "present": "vado",
+            "past": "sono andato",
+            "future": "andrò"
+          }
+        }
+      },
+      "1": {
+        "french": "Il ___ (manger) une pomme hier.",
+        "english": "He ___ (eat) an apple yesterday.",
+        "italian": "Lui ___ (mangiare) una mela ieri.",
+        "verbs": {
+          "french": {
+            "present": "mange",
+            "past": "a mangé",
+            "future": "mangera"
+          },
+          "english": {
+            "present": "eats",
+            "past": "ate",
+            "future": "will eat"
+          },
+          "italian": {
+            "present": "mangia",
+            "past": "ha mangiato",
+            "future": "mangerà"
+          }
+        }
+      },
+      "2": {
+        "french": "Nous ___ (courir) dans le parc demain.",
+        "english": "We ___ (run) in the park tomorrow.",
+        "italian": "Noi ___ (correre) nel parco domani.",
+        "verbs": {
+          "french": {
+            "present": "courons",
+            "past": "avons couru",
+            "future": "courrons"
+          },
+          "english": {
+            "present": "run",
+            "past": "ran",
+            "future": "will run"
+          },
+          "italian": {
+            "present": "corriamo",
+            "past": "abbiamo corso",
+            "future": "correremo"
+          }
+        }
+      },
+      "3": {
+        "french": "Elle ___ (parler) avec son ami tous les soirs.",
+        "english": "She ___ (talk) with her friend every evening.",
+        "italian": "Lei ___ (parlare) con il suo amico ogni sera.",
+        "verbs": {
+          "french": {
+            "present": "parle",
+            "past": "a parlé",
+            "future": "parlera"
+          },
+          "english": {
+            "present": "talks",
+            "past": "talked",
+            "future": "will talk"
+          },
+          "italian": {
+            "present": "parla",
+            "past": "ha parlato",
+            "future": "parlerà"
+          }
+        }
+      },
+      "4": {
+        "french": "Vous ___ (prendre) le bus hier matin.",
+        "english": "You ___ (take) the bus yesterday morning.",
+        "italian": "Voi ___ (prendere) l'autobus ieri mattina.",
+        "verbs": {
+          "french": {
+            "present": "prenez",
+            "past": "avez pris",
+            "future": "prendrez"
+          },
+          "english": {
+            "present": "take",
+            "past": "took",
+            "future": "will take"
+          },
+          "italian": {
+            "present": "prendete",
+            "past": "avete preso",
+            "future": "prenderete"
+          }
+        }
+      },
+      "5": {
+        "french": "Ils ___ (venir) à la fête la semaine prochaine.",
+        "english": "They ___ (come) to the party next week.",
+        "italian": "Loro ___ (venire) alla festa la prossima settimana.",
+        "verbs": {
+          "french": {
+            "present": "viennent",
+            "past": "sont venus",
+            "future": "viendront"
+          },
+          "english": {
+            "present": "come",
+            "past": "came",
+            "future": "will come"
+          },
+          "italian": {
+            "present": "vengono",
+            "past": "sono venuti",
+            "future": "verranno"
+          }
+        }
+      },
+      "6": {
+        "french": "Je ___ (faire) mes devoirs tous les soirs.",
+        "english": "I ___ (do) my homework every night.",
+        "italian": "Io ___ (fare) i compiti ogni sera.",
+        "verbs": {
+          "french": {
+            "present": "fais",
+            "past": "ai fait",
+            "future": "ferai"
+          },
+          "english": {
+            "present": "do",
+            "past": "did",
+            "future": "will do"
+          },
+          "italian": {
+            "present": "faccio",
+            "past": "ho fatto",
+            "future": "farò"
+          }
+        }
+      },
+      "7": {
+        "french": "Tu ___ (lire) ce livre demain.",
+        "english": "You ___ (read) this book tomorrow.",
+        "italian": "Tu ___ (leggere) questo libro domani.",
+        "verbs": {
+          "french": {
+            "present": "lis",
+            "past": "as lu",
+            "future": "liras"
+          },
+          "english": {
+            "present": "read",
+            "past": "read",
+            "future": "will read"
+          },
+          "italian": {
+            "present": "leggi",
+            "past": "hai letto",
+            "future": "leggerai"
+          }
+        }
+      },
+      "8": {
+        "french": "Ils ___ (vivre) à Paris depuis deux ans.",
+        "english": "They ___ (live) in Paris for two years.",
+        "italian": "Loro ___ (vivere) a Parigi da due anni.",
+        "verbs": {
+          "french": {
+            "present": "vivent",
+            "past": "ont vécu",
+            "future": "vivront"
+          },
+          "english": {
+            "present": "live",
+            "past": "lived",
+            "future": "will live"
+          },
+          "italian": {
+            "present": "vivono",
+            "past": "hanno vissuto",
+            "future": "vivranno"
+          }
+        }
+      },
+      "9": {
+        "french": "Nous ___ (voir) un film au cinéma hier soir.",
+        "english": "We ___ (see) a movie at the cinema last night.",
+        "italian": "Noi ___ (vedere) un film al cinema ieri sera.",
+        "verbs": {
+          "french": {
+            "present": "voyons",
+            "past": "avons vu",
+            "future": "verrons"
+          },
+          "english": {
+            "present": "see",
+            "past": "saw",
+            "future": "will see"
+          },
+          "italian": {
+            "present": "vediamo",
+            "past": "abbiamo visto",
+            "future": "vedremo"
+          }
+        }
+      }
+    }
+    

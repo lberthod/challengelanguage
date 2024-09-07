@@ -1,0 +1,624 @@
+
+    {
+        "tomato": {
+          "id": "tomato",
+          "key": "tomato",
+          "sentence": {
+            "en": "A ___ is round and red or green.",
+            "fr": "Une ___ est ronde et rouge ou verte.",
+            "it": "Una ___ è rotonda e rossa o verde.",
+            "ru": "___ круглая, красная или зелёная.",
+            "zh": "___ 是圆的，红色或绿色。",
+            "es": "Una ___ es redonda y roja o verde.",
+            "pt": "Uma ___ é redonda e vermelha ou verde."
+          },
+          "blanks": [
+            "tomato",
+            "tomate",
+            "pomodoro",
+            "помидор",
+            "番茄",
+            "tomate",
+            "tomate"
+          ],
+          "correct": {
+            "en": "tomato",
+            "fr": "tomate",
+            "it": "pomodoro",
+            "ru": "помидор",
+            "zh": "番茄",
+            "es": "tomate",
+            "pt": "tomate"
+          }
+        },
+        "carrot": {
+          "id": "carrot",
+          "key": "carrot",
+          "sentence": {
+            "en": "A ___ is orange and long.",
+            "fr": "Une ___ est orange et longue.",
+            "it": "Una ___ è arancione e lunga.",
+            "ru": "___ оранжевая и длинная.",
+            "zh": "___ 是橙色且长的。",
+            "es": "Una ___ es naranja y larga.",
+            "pt": "Uma ___ é laranja e comprida."
+          },
+          "blanks": [
+            "carrot",
+            "carotte",
+            "carota",
+            "морковь",
+            "胡萝卜",
+            "zanahoria",
+            "cenoura"
+          ],
+          "correct": {
+            "en": "carrot",
+            "fr": "carotte",
+            "it": "carota",
+            "ru": "морковь",
+            "zh": "胡萝卜",
+            "es": "zanahoria",
+            "pt": "cenoura"
+          }
+        },
+        "potato": {
+          "id": "potato",
+          "key": "potato",
+          "sentence": {
+            "en": "A ___ is a root vegetable that can be mashed.",
+            "fr": "Un ___ est un légume-racine que l'on peut écraser.",
+            "it": "Una ___ è un ortaggio a radice che può essere schiacciato.",
+            "ru": "___ — это корнеплод, который можно размять.",
+            "zh": "___ 是一种可以捣碎的根茎蔬菜。",
+            "es": "Una ___ es una verdura de raíz que se puede machacar.",
+            "pt": "Uma ___ é um legume de raiz que pode ser amassado."
+          },
+          "blanks": [
+            "potato",
+            "pomme de terre",
+            "patata",
+            "картофель",
+            "土豆",
+            "patata",
+            "batata"
+          ],
+          "correct": {
+            "en": "potato",
+            "fr": "pomme de terre",
+            "it": "patata",
+            "ru": "картофель",
+            "zh": "土豆",
+            "es": "patata",
+            "pt": "batata"
+          }
+        },
+        "lettuce": {
+          "id": "lettuce",
+          "key": "lettuce",
+          "sentence": {
+            "en": "A ___ is green and has many layers.",
+            "fr": "Un ___ est vert et a plusieurs couches.",
+            "it": "Un ___ è verde e ha molti strati.",
+            "ru": "___ зелёный и имеет много слоев.",
+            "zh": "___ 是绿色的，有很多层。",
+            "es": "Un ___ es verde y tiene muchas capas.",
+            "pt": "Um ___ é verde e tem muitas camadas."
+          },
+          "blanks": [
+            "lettuce",
+            "laitue",
+            "lattuga",
+            "салат",
+            "生菜",
+            "lechuga",
+            "alface"
+          ],
+          "correct": {
+            "en": "lettuce",
+            "fr": "laitue",
+            "it": "lattuga",
+            "ru": "салат",
+            "zh": "生菜",
+            "es": "lechuga",
+            "pt": "alface"
+          }
+        },
+        "cucumber": {
+          "id": "cucumber",
+          "key": "cucumber",
+          "sentence": {
+            "en": "A ___ is a small green vegetable, often eaten in salads.",
+            "fr": "Un ___ est un petit légume vert, souvent mangé dans les salades.",
+            "it": "Un ___ è un piccolo ortaggio verde, spesso mangiato nelle insalate.",
+            "ru": "___ — это маленький зелёный овощ, который часто едят в салатах.",
+            "zh": "___ 是一种绿色的小蔬菜，通常在沙拉中食用。",
+            "es": "Un ___ es una pequeña verdura verde, a menudo se come en ensaladas.",
+            "pt": "Um ___ é um pequeno vegetal verde, frequentemente comido em saladas."
+          },
+          "blanks": [
+            "cucumber",
+            "concombre",
+            "cetriolo",
+            "огурец",
+            "黄瓜",
+            "pepino",
+            "pepino"
+          ],
+          "correct": {
+            "en": "cucumber",
+            "fr": "concombre",
+            "it": "cetriolo",
+            "ru": "огурец",
+            "zh": "黄瓜",
+            "es": "pepino",
+            "pt": "pepino"
+          }
+        },
+        "broccoli": {
+          "id": "broccoli",
+          "key": "broccoli",
+          "sentence": {
+            "en": "A ___ is green and shaped like a tree.",
+            "fr": "Un ___ est vert et a la forme d'un arbre.",
+            "it": "Un ___ è verde e ha la forma di un albero.",
+            "ru": "___ зелёный и имеет форму дерева.",
+            "zh": "___ 是绿色的，形状像一棵树。",
+            "es": "Un ___ es verde y tiene forma de árbol.",
+            "pt": "Um ___ é verde e tem a forma de uma árvore."
+          },
+          "blanks": [
+            "broccoli",
+            "brocoli",
+            "broccolo",
+            "брокколи",
+            "西兰花",
+            "brócoli",
+            "brócolis"
+          ],
+          "correct": {
+            "en": "broccoli",
+            "fr": "brocoli",
+            "it": "broccolo",
+            "ru": "брокколи",
+            "zh": "西兰花",
+            "es": "brócoli",
+            "pt": "brócolis"
+          }
+        },
+        "onion": {
+          "id": "onion",
+          "key": "onion",
+          "sentence": {
+            "en": "A ___ is purple and shaped like a bulb.",
+            "fr": "Un ___ est violet et en forme de bulbe.",
+            "it": "Un ___ è viola e ha la forma di un bulbo.",
+            "ru": "___ фиолетовый и имеет форму луковицы.",
+            "zh": "___ 是紫色的，像一个灯泡。",
+            "es": "Un ___ es morado y tiene forma de bulbo.",
+            "pt": "Um ___ é roxo e tem formato de bulbo."
+          },
+          "blanks": [
+            "onion",
+            "oignon",
+            "cipolla",
+            "лук",
+            "洋葱",
+            "cebolla",
+            "cebola"
+          ],
+          "correct": {
+            "en": "onion",
+            "fr": "oignon",
+            "it": "cipolla",
+            "ru": "лук",
+            "zh": "洋葱",
+            "es": "cebolla",
+            "pt": "cebola"
+          }
+        },
+        "garlic": {
+          "id": "garlic",
+          "key": "garlic",
+          "sentence": {
+            "en": "A ___ is white and has a strong flavor, often used in cooking.",
+            "fr": "Un ___ est blanc et a une saveur forte, souvent utilisé en cuisine.",
+            "it": "Un ___ è bianco e ha un sapore forte, spesso usato in cucina.",
+            "ru": "___ белый и имеет сильный вкус, часто используется в кулинарии.",
+            "zh": "___ 是白色的，味道浓烈，常用于烹饪。",
+            "es": "Un ___ es blanco y tiene un sabor fuerte, a menudo se usa en la cocina.",
+            "pt": "Um ___ é branco e tem um sabor forte, frequentemente usado na culinária."
+          },
+          "blanks": [
+            "garlic",
+            "ail",
+            "aglio",
+            "чеснок",
+            "大蒜",
+            "ajo",
+            "alho"
+          ],
+          "correct": {
+            "en": "garlic",
+            "fr": "ail",
+            "it": "aglio",
+            "ru": "чеснок",
+            "zh": "大蒜",
+            "es": "ajo",
+            "pt": "alho"
+          }
+        },
+        "spinach": {
+          "id": "spinach",
+          "key": "spinach",
+          "sentence": {
+            "en": "A ___ is green and has a bitter taste, often used in salads.",
+            "fr": "Un ___ est vert et a un goût amer, souvent utilisé dans les salades.",
+            "it": "Un ___ è verde e ha un sapore amaro, spesso usato nelle insalate.",
+            "ru": "___ зелёный с горьким вкусом, часто используется в салатах.",
+            "zh": "___ 是绿色的，味道苦，常用于沙拉。",
+            "es": "Un ___ es verde y tiene un sabor amargo, se usa a menudo en ensaladas.",
+            "pt": "Um ___ é verde e tem um gosto amargo, frequentemente usado em saladas."
+          },
+          "blanks": [
+            "spinach",
+            "épinard",
+            "spinacio",
+            "шпинат",
+            "菠菜",
+            "espinaca",
+            "espinafre"
+          ],
+          "correct": {
+            "en": "spinach",
+            "fr": "épinard",
+            "it": "spinacio",
+            "ru": "шпинат",
+            "zh": "菠菜",
+            "es": "espinaca",
+            "pt": "espinafre"
+          }
+        },
+        "zucchini": {
+          "id": "zucchini",
+          "key": "zucchini",
+          "sentence": {
+            "en": "A ___ is long and green, often used in cooking.",
+            "fr": "Un ___ est long et vert, souvent utilisé en cuisine.",
+            "it": "Un ___ è lungo e verde, spesso usato in cucina.",
+            "ru": "___ длинный и зелёный, часто используется в кулинарии.",
+            "zh": "___ 是长且绿色的，常用于烹饪。",
+            "es": "Un ___ es largo y verde, a menudo se usa en la cocina.",
+            "pt": "Um ___ é longo e verde, frequentemente usado na culinária."
+          },
+          "blanks": [
+            "zucchini",
+            "courgette",
+            "zucchina",
+            "кабачок",
+            "西葫芦",
+            "calabacín",
+            "abobrinha"
+          ],
+          "correct": {
+            "en": "zucchini",
+            "fr": "courgette",
+            "it": "zucchina",
+            "ru": "кабачок",
+            "zh": "西葫芦",
+            "es": "calabacín",
+            "pt": "abobrinha"
+          }
+        },
+        "corn": {
+        "id": "corn",
+        "key": "corn",
+        "sentence": {
+          "en": "A ___ is yellow and can be boiled or grilled.",
+          "fr": "Un ___ est jaune et peut être bouilli ou grillé.",
+          "it": "Un ___ è giallo e può essere bollito o grigliato.",
+          "ru": "___ жёлтый и может быть сварен или зажарен.",
+          "zh": "___ 是黄色的，可以煮或烧烤。",
+          "es": "Un ___ es amarillo y se puede hervir o asar.",
+          "pt": "Um ___ é amarelo e pode ser fervido ou grelhado."
+        },
+        "blanks": [
+          "corn",
+          "maïs",
+          "mais",
+          "кукуруза",
+          "玉米",
+          "maíz",
+          "milho"
+        ],
+        "correct": {
+          "en": "corn",
+          "fr": "maïs",
+          "it": "mais",
+          "ru": "кукуруза",
+          "zh": "玉米",
+          "es": "maíz",
+          "pt": "milho"
+        }
+      },
+      "pea": {
+        "id": "pea",
+        "key": "pea",
+        "sentence": {
+          "en": "A ___ is small, round, and green.",
+          "fr": "Un ___ est petit, rond, et vert.",
+          "it": "Un ___ è piccolo, rotondo e verde.",
+          "ru": "___ маленький, круглый и зелёный.",
+          "zh": "___ 是小的，圆的，绿色的。",
+          "es": "Un ___ es pequeño, redondo y verde.",
+          "pt": "Um ___ é pequeno, redondo e verde."
+        },
+        "blanks": [
+          "pea",
+          "pois",
+          "pisello",
+          "горошек",
+          "豌豆",
+          "guisante",
+          "ervilha"
+        ],
+        "correct": {
+          "en": "pea",
+          "fr": "pois",
+          "it": "pisello",
+          "ru": "горошек",
+          "zh": "豌豆",
+          "es": "guisante",
+          "pt": "ervilha"
+        }
+      },
+      "eggplant": {
+        "id": "eggplant",
+        "key": "eggplant",
+        "sentence": {
+          "en": "A ___ is purple and elongated.",
+          "fr": "Une ___ est violette et allongée.",
+          "it": "Una ___ è viola e allungata.",
+          "ru": "___ фиолетовый и продолговатый.",
+          "zh": "___ 是紫色且细长的。",
+          "es": "Una ___ es morada y alargada.",
+          "pt": "Uma ___ é roxa e alongada."
+        },
+        "blanks": [
+          "eggplant",
+          "aubergine",
+          "melanzana",
+          "баклажан",
+          "茄子",
+          "berenjena",
+          "berinjela"
+        ],
+        "correct": {
+          "en": "eggplant",
+          "fr": "aubergine",
+          "it": "melanzana",
+          "ru": "баклажан",
+          "zh": "茄子",
+          "es": "berenjena",
+          "pt": "berinjela"
+        }
+      },
+      "bell_pepper": {
+        "id": "bell_pepper",
+        "key": "bell_pepper",
+        "sentence": {
+          "en": "A ___ can be green, red, yellow, or orange.",
+          "fr": "Un ___ peut être vert, rouge, jaune ou orange.",
+          "it": "Un ___ può essere verde, rosso, giallo o arancione.",
+          "ru": "___ может быть зелёным, красным, жёлтым или оранжевым.",
+          "zh": "___ 可以是绿色、红色、黄色或橙色。",
+          "es": "Un ___ puede ser verde, rojo, amarillo o naranja.",
+          "pt": "Um ___ pode ser verde, vermelho, amarelo ou laranja."
+        },
+        "blanks": [
+          "bell pepper",
+          "poivron",
+          "peperone",
+          "перец",
+          "甜椒",
+          "pimiento",
+          "pimentão"
+        ],
+        "correct": {
+          "en": "bell pepper",
+          "fr": "poivron",
+          "it": "peperone",
+          "ru": "перец",
+          "zh": "甜椒",
+          "es": "pimiento",
+          "pt": "pimentão"
+        }
+      },
+      "celery": {
+        "id": "celery",
+        "key": "celery",
+        "sentence": {
+          "en": "A ___ is green and crunchy, often eaten raw.",
+          "fr": "Un ___ est vert et croquant, souvent mangé cru.",
+          "it": "Un ___ è verde e croccante, spesso mangiato crudo.",
+          "ru": "___ зелёный и хрустящий, часто едят сырым.",
+          "zh": "___ 是绿色的，脆的，通常生吃。",
+          "es": "Un ___ es verde y crujiente, a menudo se come crudo.",
+          "pt": "Um ___ é verde e crocante, frequentemente comido cru."
+        },
+        "blanks": [
+          "celery",
+          "céleri",
+          "sedano",
+          "сельдерей",
+          "芹菜",
+          "apio",
+          "aipo"
+        ],
+        "correct": {
+          "en": "celery",
+          "fr": "céleri",
+          "it": "sedano",
+          "ru": "сельдерей",
+          "zh": "芹菜",
+          "es": "apio",
+          "pt": "aipo"
+        }
+      },
+      "radish": {
+        "id": "radish",
+        "key": "radish",
+        "sentence": {
+          "en": "A ___ is small, red, and spicy, often used in salads.",
+          "fr": "Un ___ est petit, rouge, et piquant, souvent utilisé dans les salades.",
+          "it": "Un ___ è piccolo, rosso e piccante, spesso usato nelle insalate.",
+          "ru": "___ маленький, красный и острый, часто используется в салатах.",
+          "zh": "___ 是小的，红色的，辛辣的，通常用于沙拉中。",
+          "es": "Un ___ es pequeño, rojo y picante, a menudo se usa en ensaladas.",
+          "pt": "Um ___ é pequeno, vermelho e picante, frequentemente usado em saladas."
+        },
+        "blanks": [
+          "radish",
+          "radis",
+          "ravanello",
+          "редис",
+          "萝卜",
+          "rábano",
+          "rabanete"
+        ],
+        "correct": {
+          "en": "radish",
+          "fr": "radis",
+          "it": "ravanello",
+          "ru": "редис",
+          "zh": "萝卜",
+          "es": "rábano",
+          "pt": "rabanete"
+        }
+      },
+      "kale": {
+        "id": "kale",
+        "key": "kale",
+        "sentence": {
+          "en": "A ___ is a leafy green vegetable, often used in salads or smoothies.",
+          "fr": "Un ___ est un légume à feuilles vertes, souvent utilisé dans les salades ou les smoothies.",
+          "it": "Un ___ è un ortaggio a foglia verde, spesso usato nelle insalate o nei frullati.",
+          "ru": "___ — это зелёный листовой овощ, который часто используется в салатах или смузи.",
+          "zh": "___ 是一种绿叶蔬菜，常用于沙拉或奶昔中。",
+          "es": "Un ___ es un vegetal de hojas verdes, a menudo usado en ensaladas o batidos.",
+          "pt": "Um ___ é um vegetal de folhas verdes, frequentemente usado em saladas ou smoothies."
+        },
+        "blanks": [
+          "kale",
+          "chou frisé",
+          "cavolo riccio",
+          "кале",
+          "羽衣甘蓝",
+          "col rizada",
+          "couve"
+        ],
+        "correct": {
+          "en": "kale",
+          "fr": "chou frisé",
+          "it": "cavolo riccio",
+          "ru": "кале",
+          "zh": "羽衣甘蓝",
+          "es": "col rizada",
+          "pt": "couve"
+        }
+      },
+      "leek": {
+        "id": "leek",
+        "key": "leek",
+        "sentence": {
+          "en": "A ___ is a long, white and green vegetable, often used in soups.",
+          "fr": "Un ___ est un légume long, blanc et vert, souvent utilisé dans les soupes.",
+          "it": "Un ___ è un lungo ortaggio bianco e verde, spesso usato nelle zuppe.",
+          "ru": "___ — это длинный бело-зелёный овощ, который часто используется в супах.",
+          "zh": "___ 是一种长条状的白绿色蔬菜，常用于汤中。",
+          "es": "Un ___ es un vegetal largo, blanco y verde, a menudo se usa en sopas.",
+          "pt": "Um ___ é um vegetal longo, branco e verde, frequentemente usado em sopas."
+        },
+        "blanks": [
+          "leek",
+          "poireau",
+          "porro",
+          "лук-порей",
+          "韭菜",
+          "puerro",
+          "alho-poró"
+        ],
+        "correct": {
+          "en": "leek",
+          "fr": "poireau",
+          "it": "porro",
+          "ru": "лук-порей",
+          "zh": "韭菜",
+          "es": "puerro",
+          "pt": "alho-poró"
+        }
+      },
+      "beet": {
+        "id": "beet",
+        "key": "beet",
+        "sentence": {
+          "en": "A ___ is red and often used in salads or soups.",
+          "fr": "Une ___ est rouge et souvent utilisée dans les salades ou les soupes.",
+          "it": "Una ___ è rossa e spesso usata nelle insalate o nelle zuppe.",
+          "ru": "___ красная и часто используется в салатах или супах.",
+          "zh": "___ 是红色的，常用于沙拉或汤中。",
+          "es": "Una ___ es roja y a menudo se usa en ensaladas o sopas.",
+          "pt": "Uma ___ é vermelha e frequentemente usada em saladas ou sopas."
+        },
+        "blanks": [
+          "beet",
+          "betterave",
+          "barbabietola",
+          "свёкла",
+          "甜菜",
+          "remolacha",
+          "beterraba"
+        ],
+        "correct": {
+          "en": "beet",
+          "fr": "betterave",
+          "it": "barbabietola",
+          "ru": "свёкла",
+          "zh": "甜菜",
+          "es": "remolacha",
+          "pt": "beterraba"
+        }
+      },
+      "sweet_potato": {
+        "id": "sweet_potato",
+        "key": "sweet_potato",
+        "sentence": {
+          "en": "A ___ is a root vegetable that is orange and sweet.",
+          "fr": "Une ___ est un légume-racine orange et sucré.",
+          "it": "Una ___ è un ortaggio a radice arancione e dolce.",
+          "ru": "___ — это корнеплод оранжевого цвета и сладкий.",
+          "zh": "___ 是一种橙色且甜的根茎蔬菜。",
+          "es": "Una ___ es una verdura de raíz naranja y dulce.",
+          "pt": "Uma ___ é um legume de raiz laranja e doce."
+        },
+        "blanks": [
+          "sweet potato",
+          "patate douce",
+          "patata dolce",
+          "сладкий картофель",
+          "红薯",
+          "batata dulce",
+          "batata doce"
+        ],
+        "correct": {
+          "en": "sweet potato",
+          "fr": "patate douce",
+          "it": "patata dolce",
+          "ru": "сладкий картофель",
+          "zh": "红薯",
+          "es": "batata dulce",
+          "pt": "batata doce"
+        }
+      }
+      }
+    

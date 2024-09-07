@@ -1,0 +1,56 @@
+{
+    "shopping": [
+      {
+        "id": 0,
+        "languages": {
+          "french": "Je vais au marché pour acheter des légumes.",
+          "english": "I am going to the market to buy vegetables.",
+          "italian": "Vado al mercato per comprare verdure."
+        }
+      },
+      {
+        "id": 1,
+        "languages": {
+          "french": "Elle cherche des vêtements en solde.",
+          "english": "She is looking for clothes on sale.",
+          "italian": "Sta cercando vestiti in saldo."
+        }
+      }
+    ],
+    "weather": [
+      {
+        "id": 0,
+        "languages": {
+          "french": "Il fait très froid aujourd'hui.",
+          "english": "It's very cold today.",
+          "italian": "Oggi fa molto freddo."
+        }
+      },
+      {
+        "id": 1,
+        "languages": {
+          "french": "Le soleil brille, c'est une belle journée.",
+          "english": "The sun is shining, it's a beautiful day.",
+          "italian": "Il sole splende, è una bella giornata."
+        }
+      }
+    ],
+    "daily_routine": [
+      {
+        "id": 0,
+        "languages": {
+          "french": "Je prends mon petit déjeuner à 8 heures.",
+          "english": "I have breakfast at 8 o'clock.",
+          "italian": "Faccio colazione alle 8."
+        }
+      },
+      {
+        "id": 1,
+        "languages": {
+          "french": "Nous allons à l'école en bus tous les matins.",
+          "english": "We go to school by bus every morning.",
+          "italian": "Andiamo a scuola in autobus ogni mattina."
+        }
+      }
+    ]
+  }
