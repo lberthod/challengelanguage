@@ -1,0 +1,244 @@
+{
+    "tomato": {
+      "id": "tomato",
+      "text": {
+        "en": "tomato",
+        "fr": "tomate",
+        "it": "pomodoro",
+        "ru": "помидор",
+        "zh": "番茄",
+        "es": "tomate",
+        "pt": "tomate"
+      },
+      "synonymes": {
+        "en": ["fruit", "vegetable"],
+        "fr": ["fruit", "légume"],
+        "it": ["frutto", "ortaggio"],
+        "ru": ["фрукт", "овощ"],
+        "zh": ["水果", "蔬菜"],
+        "es": ["fruta", "vegetal"],
+        "pt": ["fruta", "legume"]
+      },
+      "antonymes": {
+        "en": ["meat", "animal"],
+        "fr": ["viande", "animal"],
+        "it": ["carne", "animale"],
+        "ru": ["мясо", "животное"],
+        "zh": ["肉", "动物"],
+        "es": ["carne", "animal"],
+        "pt": ["carne", "animal"]
+      }
+    },
+    "carrot": {
+      "id": "carrot",
+      "text": {
+        "en": "carrot",
+        "fr": "carotte",
+        "it": "carota",
+        "ru": "морковь",
+        "zh": "胡萝卜",
+        "es": "zanahoria",
+        "pt": "cenoura"
+      },
+      "synonymes": {
+        "en": ["vegetable", "root"],
+        "fr": ["légume", "racine"],
+        "it": ["ortaggio", "radice"],
+        "ru": ["овощ", "корень"],
+        "zh": ["蔬菜", "根"],
+        "es": ["vegetal", "raíz"],
+        "pt": ["legume", "raiz"]
+      },
+      "antonymes": {
+        "en": ["flower", "leaf"],
+        "fr": ["fleur", "feuille"],
+        "it": ["fiore", "foglia"],
+        "ru": ["цветок", "лист"],
+        "zh": ["花", "叶子"],
+        "es": ["flor", "hoja"],
+        "pt": ["flor", "folha"]
+      }
+    },
+    "lettuce": {
+      "id": "lettuce",
+      "text": {
+        "en": "lettuce",
+        "fr": "laitue",
+        "it": "lattuga",
+        "ru": "салат",
+        "zh": "生菜",
+        "es": "lechuga",
+        "pt": "alface"
+      },
+      "synonymes": {
+        "en": ["leaf", "green"],
+        "fr": ["feuille", "vert"],
+        "it": ["foglia", "verde"],
+        "ru": ["лист", "зеленый"],
+        "zh": ["叶子", "绿色"],
+        "es": ["hoja", "verde"],
+        "pt": ["folha", "verde"]
+      },
+      "antonymes": {
+        "en": ["root", "fruit"],
+        "fr": ["racine", "fruit"],
+        "it": ["radice", "frutto"],
+        "ru": ["корень", "фрукт"],
+        "zh": ["根", "水果"],
+        "es": ["raíz", "fruta"],
+        "pt": ["raiz", "fruta"]
+      }
+    },
+    "onion": {
+      "id": "onion",
+      "text": {
+        "en": "onion",
+        "fr": "oignon",
+        "it": "cipolla",
+        "ru": "лук",
+        "zh": "洋葱",
+        "es": "cebolla",
+        "pt": "cebola"
+      },
+      "synonymes": {
+        "en": ["vegetable", "bulb"],
+        "fr": ["légume", "bulbe"],
+        "it": ["ortaggio", "bulbo"],
+        "ru": ["овощ", "луковица"],
+        "zh": ["蔬菜", "球茎"],
+        "es": ["vegetal", "bulbo"],
+        "pt": ["legume", "bulbo"]
+      },
+      "antonymes": {
+        "en": ["fruit", "leaf"],
+        "fr": ["fruit", "feuille"],
+        "it": ["frutto", "foglia"],
+        "ru": ["фрукт", "лист"],
+        "zh": ["水果", "叶子"],
+        "es": ["fruta", "hoja"],
+        "pt": ["fruta", "folha"]
+      }
+    },
+    "cucumber": {
+  "id": "cucumber",
+  "text": {
+    "en": "cucumber",
+    "fr": "concombre",
+    "it": "cetriolo",
+    "ru": "огурец",
+    "zh": "黄瓜",
+    "es": "pepino",
+    "pt": "pepino"
+  },
+  "synonymes": {
+    "en": ["vegetable", "gourd"],
+    "fr": ["légume", "courge"],
+    "it": ["ortaggio", "zucca"],
+    "ru": ["овощ", "тыква"],
+    "zh": ["蔬菜", "瓜"],
+    "es": ["vegetal", "calabaza"],
+    "pt": ["legume", "abóbora"]
+  },
+  "antonymes": {
+    "en": ["fruit", "leaf"],
+    "fr": ["fruit", "feuille"],
+    "it": ["frutto", "foglia"],
+    "ru": ["фрукт", "лист"],
+    "zh": ["水果", "叶子"],
+    "es": ["fruta", "hoja"],
+    "pt": ["fruta", "folha"]
+  }
+},
+"broccoli": {
+  "id": "broccoli",
+  "text": {
+    "en": "broccoli",
+    "fr": "brocoli",
+    "it": "broccolo",
+    "ru": "брокколи",
+    "zh": "西兰花",
+    "es": "brócoli",
+    "pt": "brócolis"
+  },
+  "synonymes": {
+    "en": ["vegetable", "green"],
+    "fr": ["légume", "vert"],
+    "it": ["ortaggio", "verde"],
+    "ru": ["овощ", "зеленый"],
+    "zh": ["蔬菜", "绿色"],
+    "es": ["vegetal", "verde"],
+    "pt": ["legume", "verde"]
+  },
+  "antonymes": {
+    "en": ["fruit", "root"],
+    "fr": ["fruit", "racine"],
+    "it": ["frutto", "radice"],
+    "ru": ["фрукт", "корень"],
+    "zh": ["水果", "根"],
+    "es": ["fruta", "raíz"],
+    "pt": ["fruta", "raiz"]
+  }
+},
+"pepper": {
+  "id": "pepper",
+  "text": {
+    "en": "pepper",
+    "fr": "poivron",
+    "it": "peperone",
+    "ru": "перец",
+    "zh": "辣椒",
+    "es": "pimiento",
+    "pt": "pimentão"
+  },
+  "synonymes": {
+    "en": ["vegetable", "spice"],
+    "fr": ["légume", "épice"],
+    "it": ["ortaggio", "spezia"],
+    "ru": ["овощ", "специя"],
+    "zh": ["蔬菜", "香料"],
+    "es": ["vegetal", "especia"],
+    "pt": ["legume", "tempero"]
+  },
+  "antonymes": {
+    "en": ["fruit", "leaf"],
+    "fr": ["fruit", "feuille"],
+    "it": ["frutto", "foglia"],
+    "ru": ["фрукт", "лист"],
+    "zh": ["水果", "叶子"],
+    "es": ["fruta", "hoja"],
+    "pt": ["fruta", "folha"]
+  }
+},
+"spinach": {
+  "id": "spinach",
+  "text": {
+    "en": "spinach",
+    "fr": "épinard",
+    "it": "spinaci",
+    "ru": "шпинат",
+    "zh": "菠菜",
+    "es": "espinaca",
+    "pt": "espinafre"
+  },
+  "synonymes": {
+    "en": ["leaf", "green"],
+    "fr": ["feuille", "vert"],
+    "it": ["foglia", "verde"],
+    "ru": ["лист", "зеленый"],
+    "zh": ["叶子", "绿色"],
+    "es": ["hoja", "verde"],
+    "pt": ["folha", "verde"]
+  },
+  "antonymes": {
+    "en": ["root", "fruit"],
+    "fr": ["racine", "fruit"],
+    "it": ["radice", "frutto"],
+    "ru": ["корень", "фрукт"],
+    "zh": ["根", "水果"],
+    "es": ["raíz", "fruta"],
+    "pt": ["raiz", "fruta"]
+  }
+}
+
+  }
+  

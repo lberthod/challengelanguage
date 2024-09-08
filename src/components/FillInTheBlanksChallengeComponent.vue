@@ -117,14 +117,8 @@
         const selectedSentence = this.sentences[randomIndex];
   
         if (selectedSentence) {
-          // Replace the blank in the selected sentence with a blank space
           this.currentSentence = selectedSentence.sentence[this.selectedLanguage].replace('___', '___');
-  
-          // Filter blanks to show only the words in the selected language
-          this.currentOptions = [selectedSentence.correct[this.selectedLanguage], ...this.generateRandomWords()];
-  
-          // Shuffle options
-          this.currentOptions = this.shuffleArray(this.currentOptions);
+          this.currentOptions = this.removeDuplicates([...selectedSentence.blanks]);
           this.correctAnswer = selectedSentence.correct[this.selectedLanguage];
           this.isCorrect = false;
           this.feedbackMessage = '';
@@ -132,9 +126,8 @@
           console.error('La phrase sélectionnée est invalide.');
         }
       },
-      generateRandomWords() {
-        const allWords = this.sentences.flatMap((sentence) => sentence.correct[this.selectedLanguage]);
-        return this.shuffleArray(allWords).slice(0, 3); // Randomly pick 3 words from the list
+      removeDuplicates(array) {
+        return [...new Set(array)];
       },
       shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);

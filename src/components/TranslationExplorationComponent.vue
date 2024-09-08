@@ -1,212 +1,181 @@
 <template>
-  <div class="translation-exploration">
-    <h2>Exploration de Vocabulaire</h2>
-    <p>Sélectionnez un point pour explorer le vocabulaire dans la langue choisie !</p>
+  <div class="sentence-builder-game">
+    <h2>Jeu de Construction de Phrase</h2>
+    <p>Réorganisez les mots pour former une phrase correcte !</p>
 
     <!-- Language selection -->
-    <div class="language-selection">
-      <label for="language-select">Choisissez une langue :</label>
-      <select id="language-select" v-model="selectedLanguage">
-        <option value="french">Français</option>
-        <option value="english">Anglais</option>
-        <option value="italian">Italien</option>
-      </select>
-    </div>
-
-    <!-- Category selection -->
-    <div class="category-selection" v-if="sentencesData && Object.keys(sentencesData.categories).length > 0">
-      <label for="category-select">Choisissez une catégorie :</label>
-      <select id="category-select" v-model="selectedCategory">
-        <option disabled value="">Sélectionner</option>
-        <option v-for="(category, index) in Object.keys(sentencesData.categories)" :key="index" :value="category">
-          {{ category }}
+    <div v-if="!gameStarted" class="language-selection">
+      <label for="language">Sélectionnez une langue :</label>
+      <select v-model="selectedLanguage" id="language">
+        <option value="" disabled>Sélectionner une langue</option>
+        <option v-for="(languageName, languageCode) in languages" :key="languageCode" :value="languageCode">
+          {{ languageName }}
         </option>
       </select>
     </div>
 
-    <!-- Display sentence in the selected language -->
-    <div v-if="currentSentence" class="sentence-area">
-      <p><strong>Phrase en {{ selectedLanguage }} :</strong> {{ currentSentence.languages[selectedLanguage] }}</p>
-
-      <!-- Display answer options -->
-      <div class="options-container">
-        <button
-          v-for="(option, index) in answerOptions"
-          :key="index"
-          @click="checkAnswer(option)"
-          class="option-button"
-        >
-          {{ option }}
-        </button>
-      </div>
+    <!-- Category selection -->
+    <div v-if="!gameStarted && selectedLanguage" class="category-selection">
+      <label for="category">Sélectionnez une catégorie :</label>
+      <select v-model="selectedCategory" id="category">
+        <option value="" disabled>Sélectionner une catégorie</option>
+        <option v-for="category in categories" :key="category" :value="category">{{ category }}</option>
+      </select>
     </div>
 
-    <!-- Feedback and next button -->
-    <p v-if="feedbackMessage" class="feedback">{{ feedbackMessage }}</p>
-    <button v-if="isCorrect" @click="nextSentence" class="next-sentence-button">Phrase Suivante</button>
+    <!-- Level selection -->
+    <div v-if="!gameStarted && selectedCategory" class="level-selection">
+      <label for="level">Sélectionnez un niveau :</label>
+      <select v-model="selectedLevel" id="level" @change="loadFirebaseData">
+        <option value="" disabled>Sélectionner un niveau</option>
+        <option v-for="level in levels" :key="level" :value="level">{{ level }}</option>
+      </select>
+    </div>
+
+    <!-- Start game button -->
+    <button v-if="!gameStarted && words && words.length > 0" @click="startGame" class="start-button">Commencer le Jeu</button>
+
+    <!-- Scrambled words for sentence building -->
+    <div v-if="gameStarted && scrambledWords && scrambledWords.length > 0" class="sentence-area">
+      <p><strong>Réorganisez les mots :</strong></p>
+      <div class="scrambled-words">
+        <button v-for="(word, index) in scrambledWords" :key="index" @click="addWordToSentence(index)">
+          {{ word }}
+        </button>
+      </div>
+
+      <p><strong>Votre phrase :</strong></p>
+      <div class="constructed-sentence">
+        <button v-for="(word, index) in constructedSentence" :key="index" @click="removeWordFromSentence(index)">
+          {{ word }}
+        </button>
+      </div>
+
+      <button @click="checkSentence" class="check-button">Vérifier</button>
+      <p v-if="feedbackMessage" class="feedback">{{ feedbackMessage }}</p>
+    </div>
   </div>
 </template>
 
+
 <script>
-import { ref, get } from "firebase/database";
-import { database } from "@/firebase.js"; // Import Firebase configuration
+import { ref, get } from 'firebase/database';
+import { database } from '@/firebase.js'; // Firebase configuration
 
 export default {
-  name: "TranslationExplorationComponent",
+  name: 'SentenceBuilderGame',
   data() {
     return {
-      sentencesData: null, // Initialize as null to avoid undefined errors
-      selectedLanguage: "french", // Default language
-      selectedCategory: "", // Category selected by user
-      currentSentence: null, // Current sentence to be translated
-      answerOptions: [], // Available answer options (correct + incorrect)
-      correctOption: "", // Correct translation
-      feedbackMessage: "",
-      isCorrect: false,
+      languages: {
+        en: 'Anglais',
+        fr: 'Français',
+        it: 'Italien',
+        ru: 'Russe',
+        zh: 'Chinois',
+        es: 'Espagnol',
+        pt: 'Portugais'
+      },
+      categories: ['legumes', 'arbres', 'outils_de_soins', 'technologie'], // Available categories
+      levels: ['1', '2', '3'], // Levels for the game
+      selectedLanguage: '',
+      selectedCategory: '',
+      selectedLevel: '',
+      words: [], // Word data from the database
+      scrambledWords: [],
+      constructedSentence: [],
+      correctSentence: '',
+      feedbackMessage: '',
+      gameStarted: false
     };
   },
-  watch: {
-    selectedLanguage(newLang) {
-      console.log(`Langue sélectionnée : ${newLang}`);
-      this.resetGame(); // Reinitialize when the language changes
-    },
-    selectedCategory(newCategory) {
-      console.log(`Catégorie sélectionnée : ${newCategory}`);
-      this.resetGame(); // Reinitialize when the category changes
-    },
-  },
   methods: {
-    loadSentences() {
-      console.log("Chargement des phrases...");
-      const dbRef = ref(database, "translation_phrases");
+    loadFirebaseData() {
+      const dbRef = ref(database, `categories/${this.selectedCategory}/levels/${this.selectedLevel}/synonyms_antonyms`);
       get(dbRef)
-        .then((snapshot) => {
+        .then(snapshot => {
           if (snapshot.exists()) {
-            this.sentencesData = snapshot.val(); // Stocker les données dans sentencesData
-            console.log("Données chargées : ", this.sentencesData);
-            if (!this.selectedCategory) {
-              console.warn("Veuillez sélectionner une catégorie.");
-            } else {
-              this.nextSentence(); // Démarrer le jeu avec la première phrase
-            }
+            const data = snapshot.val();
+            this.words = data[this.selectedLanguage];
           } else {
-            console.warn("Aucune donnée disponible.");
+            console.warn('Aucune donnée disponible.');
           }
         })
-        .catch((error) => {
-          console.error("Erreur lors de la récupération des phrases :", error);
+        .catch(error => {
+          console.error('Erreur lors de la récupération des données Firebase : ', error);
         });
     },
-    nextSentence() {
-      if (this.sentencesData && this.selectedCategory) {
-        const categoryPhrases = this.sentencesData.categories[this.selectedCategory];
-
-        if (categoryPhrases && categoryPhrases.length > 0) {
-          const randomIndex = Math.floor(Math.random() * categoryPhrases.length);
-          this.currentSentence = categoryPhrases[randomIndex];
-
-          console.log("Phrase sélectionnée :", this.currentSentence);
-
-          // Generate the correct answer and incorrect options
-          this.correctOption = this.currentSentence.languages[this.selectedLanguage];
-          this.answerOptions = this.generateOptions();
-          this.feedbackMessage = "";
-          this.isCorrect = false;
-        } else {
-          console.error("Aucune phrase disponible pour cette catégorie.");
-        }
-      } else {
-        console.error("Aucune catégorie sélectionnée ou données manquantes.");
-      }
+    startGame() {
+      this.gameStarted = true;
+      this.nextSentence();
     },
-    generateOptions() {
-      const incorrectOptions = [];
-      const categoryPhrases = this.sentencesData.categories[this.selectedCategory];
+    nextSentence() {
+      const randomIndex = Math.floor(Math.random() * this.words.length);
+      const sentenceData = this.words[randomIndex];
 
-      // Generate 2 random incorrect options
-      while (incorrectOptions.length < 2) {
-        const randomPhrase = categoryPhrases[Math.floor(Math.random() * categoryPhrases.length)];
-        const randomOption = randomPhrase.languages[this.selectedLanguage];
-
-        // Ensure that incorrect options are not the same as the correct one
-        if (randomOption !== this.correctOption && !incorrectOptions.includes(randomOption)) {
-          incorrectOptions.push(randomOption);
-        }
+      this.correctSentence = sentenceData.correct;
+      this.scrambledWords = this.shuffleArray([...sentenceData.scrambled]);
+      this.constructedSentence = [];
+      this.feedbackMessage = '';
+    },
+    addWordToSentence(index) {
+      this.constructedSentence.push(this.scrambledWords[index]);
+      this.scrambledWords.splice(index, 1); // Remove word from the scrambled list
+    },
+    removeWordFromSentence(index) {
+      // Return the word to the scrambled list
+      this.scrambledWords.push(this.constructedSentence[index]);
+      this.constructedSentence.splice(index, 1); // Remove word from constructed sentence
+    },
+    checkSentence() {
+      if (this.constructedSentence.join(' ') === this.correctSentence) {
+        this.feedbackMessage = 'Bravo ! Vous avez formé la phrase correcte.';
+      } else {
+        this.feedbackMessage = 'Incorrect. Essayez encore.';
       }
-
-      console.log("Options générées : ", [...incorrectOptions, this.correctOption]);
-
-      // Shuffle and return the options (correct + incorrect)
-      return this.shuffleArray([...incorrectOptions, this.correctOption]);
     },
     shuffleArray(array) {
       return array.sort(() => Math.random() - 0.5);
-    },
-    checkAnswer(selectedOption) {
-      if (selectedOption === this.correctOption) {
-        this.feedbackMessage = "Bonne réponse !";
-        this.isCorrect = true;
-      } else {
-        this.feedbackMessage = "Mauvaise réponse. Essayez encore.";
-      }
-    },
-    resetGame() {
-      this.currentSentence = null;
-      this.answerOptions = [];
-      this.feedbackMessage = "";
-      this.isCorrect = false;
-
-      if (this.selectedCategory) {
-        this.nextSentence();
-      }
-    },
-  },
-  mounted() {
-    console.log("Le composant est monté.");
-    this.loadSentences();
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
-.translation-exploration {
+.sentence-builder-game {
   padding: 20px;
   text-align: center;
 }
 
-.language-selection,
-.category-selection {
-  margin: 10px 0;
+.scrambled-words {
+  margin-top: 20px;
 }
 
-.option-button {
+.constructed-sentence {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
   padding: 10px;
   background-color: #42b983;
   color: white;
   border: none;
-  margin: 5px;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
   font-size: 16px;
 }
 
-.option-button:hover {
+button:hover {
   background-color: #3a8d74;
+}
+
+.check-button {
+  margin-top: 20px;
 }
 
 .feedback {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
-}
-
-.next-sentence-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #42b983;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 </style>

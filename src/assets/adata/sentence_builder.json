@@ -1,0 +1,93 @@
+{
+    "en": [
+      {
+        "correct": "The cucumber is green and long.",
+        "scrambled": ["The", "cucumber", "is", "green", "and", "long"]
+      },
+      {
+        "correct": "The carrot is orange and crunchy.",
+        "scrambled": ["The", "carrot", "is", "orange", "and", "crunchy"]
+      },
+      {
+        "correct": "The onion is round and white.",
+        "scrambled": ["The", "onion", "is", "round", "and", "white"]
+      },
+      {
+        "correct": "The tomato is red and juicy.",
+        "scrambled": ["The", "tomato", "is", "red", "and", "juicy"]
+      }
+    ],
+    "fr": [
+      {
+        "correct": "Le concombre est vert et long.",
+        "scrambled": ["Le", "concombre", "est", "vert", "et", "long"]
+      },
+      {
+        "correct": "La carotte est orange et croquante.",
+        "scrambled": ["La", "carotte", "est", "orange", "et", "croquante"]
+      },
+      {
+        "correct": "L'oignon est rond et blanc.",
+        "scrambled": ["L'oignon", "est", "rond", "et", "blanc"]
+      },
+      {
+        "correct": "La tomate est rouge et juteuse.",
+        "scrambled": ["La", "tomate", "est", "rouge", "et", "juteuse"]
+      }
+    ],
+    "it": [
+      {
+        "correct": "Il cetriolo è verde e lungo.",
+        "scrambled": ["Il", "cetriolo", "è", "verde", "e", "lungo"]
+      },
+      {
+        "correct": "La carota è arancione e croccante.",
+        "scrambled": ["La", "carota", "è", "arancione", "e", "croccante"]
+      },
+      {
+        "correct": "La cipolla è rotonda e bianca.",
+        "scrambled": ["La", "cipolla", "è", "rotonda", "e", "bianca"]
+      },
+      {
+        "correct": "Il pomodoro è rosso e succoso.",
+        "scrambled": ["Il", "pomodoro", "è", "rosso", "e", "succoso"]
+      }
+    ],
+    "es": [
+      {
+        "correct": "El pepino es verde y largo.",
+        "scrambled": ["El", "pepino", "es", "verde", "y", "largo"]
+      },
+      {
+        "correct": "La zanahoria es naranja y crujiente.",
+        "scrambled": ["La", "zanahoria", "es", "naranja", "y", "crujiente"]
+      },
+      {
+        "correct": "La cebolla es redonda y blanca.",
+        "scrambled": ["La", "cebolla", "es", "redonda", "y", "blanca"]
+      },
+      {
+        "correct": "El tomate es rojo y jugoso.",
+        "scrambled": ["El", "tomate", "es", "rojo", "y", "jugoso"]
+      }
+    ],
+    "pt": [
+      {
+        "correct": "O pepino é verde e longo.",
+        "scrambled": ["O", "pepino", "é", "verde", "e", "longo"]
+      },
+      {
+        "correct": "A cenoura é laranja e crocante.",
+        "scrambled": ["A", "cenoura", "é", "laranja", "e", "crocante"]
+      },
+      {
+        "correct": "A cebola é redonda e branca.",
+        "scrambled": ["A", "cebola", "é", "redonda", "e", "branca"]
+      },
+      {
+        "correct": "O tomate é vermelho e suculento.",
+        "scrambled": ["O", "tomate", "é", "vermelho", "e", "suculento"]
+      }
+    ]
+  }
+  

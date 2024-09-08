@@ -1,189 +1,153 @@
 <template>
-    <div class="synonyms-antonyms-game">
-      <h2>Jeu de Synonymes et Antonymes</h2>
-      <p>Devinez un synonyme ou un antonyme du mot affiché !</p>
-  
-      <!-- Subcategory selection -->
-      <div v-if="!gameStarted">
-        <label for="subcategory">Choisissez une sous-catégorie :</label>
-        <select id="subcategory" v-model="selectedSubcategory" @change="loadFirebaseData">
-          <option disabled value="">Sélectionner</option>
-          <option v-for="subcategory in subcategories" :key="subcategory" :value="subcategory">{{ subcategory }}</option>
-        </select>
-      </div>
-  
-      <!-- Start button to initiate the game -->
-      <button v-if="!gameStarted && selectedSubcategory" @click="startGame" class="start-button">Start</button>
-  
-      <!-- Display the word for guessing -->
-      <div v-if="gameStarted" class="guess-area">
-        <p><strong>Mot :</strong> {{ currentWord.text.french }} ({{ currentMode }})</p>
-        <p>Choisissez un {{ currentMode }} parmi les options :</p>
-  
-        <!-- Display buttons with possible answers -->
-        <div class="options-container">
-          <button v-for="(option, index) in answerOptions" :key="index" @click="checkAnswer(option)" class="option-button">
-            {{ option }}
-          </button>
-        </div>
-  
-        <!-- Display feedback after checking the answer -->
-        <p v-if="feedbackMessage" class="feedback">{{ feedbackMessage }}</p>
-  
-        <!-- Button to load the next word -->
-        <button v-if="isCorrect" @click="nextWord" class="next-word-button">Mot suivant</button>
-      </div>
+  <div class="sentence-builder-game">
+    <h2>Jeu de Construction de Phrase</h2>
+    <p>Réorganisez les mots pour former une phrase correcte !</p>
+
+    <!-- Language selection -->
+    <div v-if="!gameStarted" class="language-selection">
+      <label for="language">Sélectionnez une langue :</label>
+      <select v-model="selectedLanguage" id="language">
+        <option value="" disabled>Sélectionner une langue</option>
+        <option v-for="(languageName, languageCode) in languages" :key="languageCode" :value="languageCode">
+          {{ languageName }}
+        </option>
+      </select>
     </div>
-  </template>
-  
-  <script>
-  import { ref, get } from 'firebase/database';
-  import { database } from '@/firebase.js'; // Firebase configuration
-  
-  export default {
-    name: 'SynonymsAntonymsGameComponent',
-    data() {
-      return {
-        subcategories: ['adjectives', 'verbs', 'nouns'], // List of subcategories
-        selectedSubcategory: '',
-        words: [],
-        currentWord: null,
-        currentMode: 'synonyme', // Mode can be either 'synonyme' or 'antonyme'
-        answerOptions: [], // Options to display for guessing
-        feedbackMessage: '',
-        isCorrect: false,
-        gameStarted: false
-      };
-    },
-    methods: {
-      loadFirebaseData() {
-        const dbRef = ref(database, `synonyms_antonyms/${this.selectedSubcategory}`);
-        get(dbRef)
-          .then((snapshot) => {
-            if (snapshot.exists()) {
-              this.words = Object.values(snapshot.val());
-              console.log('Données récupérées : ', this.words);
-            } else {
-              console.warn('Aucune donnée disponible.');
-            }
-          })
-          .catch((error) => {
-            console.error('Erreur lors de la récupération des données Firebase : ', error);
-          });
+
+    <!-- Category and Level selection -->
+    <div v-if="!gameStarted && selectedLanguage" class="level-selection">
+      <label for="level">Sélectionnez un niveau :</label>
+      <select v-model="selectedLevel" id="level" @change="loadFirebaseData">
+        <option value="" disabled>Sélectionner un niveau</option>
+        <option v-for="level in levels" :key="level" :value="level">{{ level }}</option>
+      </select>
+    </div>
+
+    <!-- Start game button -->
+    <button v-if="!gameStarted && words.length > 0" @click="startGame" class="start-button">Commencer le Jeu</button>
+
+    <!-- Scrambled words for sentence building -->
+    <div v-if="gameStarted" class="sentence-area">
+      <p><strong>Réorganisez les mots :</strong></p>
+      <div class="scrambled-words">
+        <button v-for="(word, index) in scrambledWords" :key="index" @click="addWordToSentence(index)">
+          {{ word }}
+        </button>
+      </div>
+
+      <p><strong>Votre phrase :</strong> {{ constructedSentence.join(' ') }}</p>
+
+      <button @click="checkSentence" class="check-button">Vérifier</button>
+
+      <p v-if="feedbackMessage" class="feedback">{{ feedbackMessage }}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref, get } from 'firebase/database';
+import { database } from '@/firebase.js'; // Firebase configuration
+
+export default {
+  name: 'SentenceBuilderGame',
+  data() {
+    return {
+      languages: {
+        en: 'Anglais',
+        fr: 'Français',
+        it: 'Italien',
+        ru: 'Russe',
+        zh: 'Chinois',
+        es: 'Espagnol',
+        pt: 'Portugais'
       },
-      startGame() {
-        if (this.words.length === 0) {
-          alert('Veuillez choisir une sous-catégorie valide.');
-          return;
-        }
-        this.gameStarted = true;
-        this.nextWord();
-      },
-      nextWord() {
-        // Select a random word from the list
-        const randomIndex = Math.floor(Math.random() * this.words.length);
-        this.currentWord = this.words[randomIndex];
-        this.currentMode = Math.random() > 0.5 ? 'synonymes' : 'antonymes'; // Randomly switch between synonymes and antonymes
-  
-        // Ensure the word has the required property (synonyme or antonyme)
-        if (!this.currentWord[this.currentMode] || !Array.isArray(this.currentWord[this.currentMode].french)) {
-          console.warn(`Pas de ${this.currentMode} pour ce mot.`);
-          this.nextWord(); // Retry with another word
-        } else {
-          this.prepareOptions();
-        }
-  
-        this.feedbackMessage = '';
-        this.isCorrect = false;
-      },
-      prepareOptions() {
-        const correctAnswers = this.currentWord[this.currentMode]?.french || []; // Correct options (synonyms or antonyms)
-        const incorrectAnswers = this.getIncorrectAnswers(); // Generate incorrect answers
-        this.answerOptions = this.shuffleArray([...correctAnswers, ...incorrectAnswers]); // Shuffle correct and incorrect options together
-      },
-      getIncorrectAnswers() {
-        // Generate some incorrect options from the other words in the list
-        const otherWords = this.words.filter(word => word !== this.currentWord);
-        const incorrectOptions = [];
-        while (incorrectOptions.length < 2) { // Add 2 incorrect options
-          const randomIndex = Math.floor(Math.random() * otherWords.length);
-          const randomWord = otherWords[randomIndex].text.french;
-          if (!incorrectOptions.includes(randomWord)) {
-            incorrectOptions.push(randomWord);
+      levels: ['1', '2', '3'], // Levels for the game
+      selectedLanguage: '',
+      selectedLevel: '',
+      words: [], // Word data from the database
+      scrambledWords: [],
+      constructedSentence: [],
+      correctSentence: '',
+      feedbackMessage: '',
+      gameStarted: false
+    };
+  },
+  methods: {
+    loadFirebaseData() {
+      const dbRef = ref(database, `categories/${this.selectedCategory}/levels/${this.selectedLevel}/synonyms_antonyms`);
+      get(dbRef)
+        .then(snapshot => {
+          if (snapshot.exists()) {
+            const data = snapshot.val();
+            this.words = data[this.selectedLanguage];
+            console.log('Données récupérées : ', this.words);
+          } else {
+            console.warn('Aucune donnée disponible.');
           }
-        }
-        return incorrectOptions;
-      },
-      shuffleArray(array) {
-        return array.sort(() => Math.random() - 0.5);
-      },
-      checkAnswer(selectedOption) {
-        const correctAnswers = this.currentWord[this.currentMode]?.french || []; // Get correct synonyms or antonyms
-        if (correctAnswers.includes(selectedOption)) {
-          this.feedbackMessage = 'Bonne réponse !';
-          this.isCorrect = true;
-        } else {
-          this.feedbackMessage = `Incorrect. Les ${this.currentMode}s possibles sont : ${correctAnswers.join(', ')}`;
-        }
+        })
+        .catch(error => {
+          console.error('Erreur lors de la récupération des données Firebase : ', error);
+        });
+    },
+    startGame() {
+      this.gameStarted = true;
+      this.nextSentence();
+    },
+    nextSentence() {
+      const randomIndex = Math.floor(Math.random() * this.words.length);
+      const sentenceData = this.words[randomIndex];
+
+      this.correctSentence = sentenceData.correct;
+      this.scrambledWords = this.shuffleArray([...sentenceData.scrambled]);
+      this.constructedSentence = [];
+      this.feedbackMessage = '';
+    },
+    addWordToSentence(index) {
+      this.constructedSentence.push(this.scrambledWords[index]);
+      this.scrambledWords.splice(index, 1); // Remove word from the scrambled list
+    },
+    checkSentence() {
+      if (this.constructedSentence.join(' ') === this.correctSentence) {
+        this.feedbackMessage = 'Bravo ! Vous avez formé la phrase correcte.';
+      } else {
+        this.feedbackMessage = 'Incorrect. Essayez encore.';
       }
+    },
+    shuffleArray(array) {
+      return array.sort(() => Math.random() - 0.5);
     }
-  };
-  </script>
-  
-  <style scoped>
-  .synonyms-antonyms-game {
-    padding: 20px;
-    text-align: center;
   }
-  
-  .start-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #42b983;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .options-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .option-button {
-    padding: 10px;
-    background-color: #42b983;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .option-button:hover {
-    background-color: #3a8d74;
-  }
-  
-  .feedback {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .next-word-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #42b983;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  </style>
-  
+};
+</script>
+
+<style scoped>
+.sentence-builder-game {
+  padding: 20px;
+  text-align: center;
+}
+
+.scrambled-words {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #42b983;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.check-button {
+  margin-top: 20px;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
